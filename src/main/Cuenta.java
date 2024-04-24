@@ -8,6 +8,10 @@ public class Cuenta {
         this.balance = balance;
     }
 
+    public Cuenta() {
+
+    }
+
     public String getTitular() {
         return titular;
     }
