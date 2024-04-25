@@ -7,7 +7,7 @@ public class Cajero  {
     }
 
     public void verBalance(){
-        System.out.println("Hola" + cuenta.getTitular() + "tu balance es: " + cuenta.getBalance());
+        System.out.println("Hola " + cuenta.getTitular() + " tu balance es: " + cuenta.getBalance());
     }
 
     public void depositar(double depositoCantidad){
@@ -18,8 +18,10 @@ public class Cajero  {
     public void retiro(double retiroCantidad){
         if (retiroCantidad > cuenta.getBalance()){
             System.out.println("No pudes retirar mas de tus fondos totales");
+            verBalance();
         }else {
             cuenta.setBalance(cuenta.getBalance()-retiroCantidad);
+            verBalance();
         }
     }
 }
